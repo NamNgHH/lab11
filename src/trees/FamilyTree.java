@@ -51,8 +51,9 @@ public class FamilyTree
             {
                 // If child.getNodeWithName(targetName) returns a non-null node,
                 // then that's the node we're looking for. Return it.
-            	if (child.getNodeWithName(targetName) != null)
-            		return child; 
+            	TreeNode node = child.getNodeWithName(targetName);
+            	if(node != null)
+            		return node; 
             }
             
             // Not found anywhere.
@@ -164,7 +165,7 @@ public class FamilyTree
 		}
 	}
 	
-	
+	  
 	// Returns the "deepest" node that is an ancestor of the node named name1, and also is an
 	// ancestor of the node named name2.
 	//
